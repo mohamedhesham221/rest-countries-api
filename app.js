@@ -16,7 +16,7 @@ let countries  =   {
                 { id:4, name: "Oceania",}
             ],
             selected: null,
-            theme: null,
+            theme: false,
         }
     },
     template: `<div>
@@ -68,7 +68,8 @@ let countries  =   {
         </div>`,
     created() {
         this.allCountries();
-        Bus.$on("changeTheme" ,val => this.theme = val)
+        Bus.$on("changeTheme" ,val => this.theme = val);
+        document.onload = this.deleteTheme();
     },
     methods: {
         allCountries() {
@@ -84,6 +85,9 @@ let countries  =   {
         goToDetail(data) {
             sessionStorage.setItem("CountryDetail", JSON.stringify(this.countryInDetails = data))
             router.push({path: "/details"});
+        },
+        deleteTheme() {
+            sessionStorage.removeItem("theme");
         },
     },
     computed : {
