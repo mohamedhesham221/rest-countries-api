@@ -1,0 +1,304 @@
+:root {
+    --darkMode: hsl(209, 23%, 22%);
+    --veryDarkModeBackgrd: hsl(207, 26%, 17%);
+    --lightModeText: hsl(200, 15%, 8%);
+    --darkGrayLight: hsl(0, 0%, 52%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+}
+.body-app {
+    width: 100%;
+    height: 100%;
+    background-color: var(--veryLightGray);
+}
+.container {
+    width: 100%;
+    height: max-content;
+    padding: 40px 30px 80px;
+}
+
+.heading-section {
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    padding: 30px;
+    box-shadow: 0 2px 6px #85858530;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+h2 {
+    font-size: 1.2rem;
+    width: fit-content;
+    float: left;
+}
+.switcher {
+    float: right;
+    cursor: pointer;
+}
+.input {
+    position: relative;
+    filter: drop-shadow(0 2px 3px #85858530);
+}
+.input .fas {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    color: var(--darkGrayLight);
+}
+.input input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding-left: 65px;
+    color: var(--darkGrayLight);
+}
+.input input::placeholder {
+    color: var(--darkGrayLight);
+}
+.filter {
+    width: 180px;
+    height: 50px;
+    background-color: var(--white);
+    padding: 15px;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #85858530;
+    position: relative;
+    cursor: pointer;
+}
+.filters-list {
+    width: 180px;
+    list-style: none;
+    background-color: var(--white);
+    margin-top: 40px;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    padding: 15px;
+}
+.filters-list li {
+    margin-bottom: 8px;
+}
+.liActive {
+    background-color: var(--veryDarkModeBackgrd);
+    color: var(--white);
+    padding: 2px 5px;
+}
+.filter p {
+    float: left;
+}
+.filter i {
+    float: right;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.countries {
+    width: 100%;
+    height: max-content;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+.country-card {
+    margin-bottom: 30px;
+}
+.flag {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.flag img {
+    width: 100%;
+    height: 100%;
+}
+.details {
+    padding: 25px 15px;
+    background-color: var(--white);
+    color: var(--lightModeText);
+    font-size: 1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+.details .name, .countries-details .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.name, .population,
+.region, .native,
+.sub-region,
+.domain, .currencies {
+    margin-bottom: 8px;
+}
+.name span, .population span,
+.region span, .capital span,
+.native span, .sub-region span,
+.domain span, .currencies span,
+.languages span:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--lightModeText);
+}
+.show-enter-active, .show-leave-active {
+    transition: all .5s linear;
+}
+.show-enter, .show-leave-to {
+    transform: translate(0,10px);
+    opacity: 0;
+}
+
+.countries-details {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    padding: 100px 20px 30px;
+    background-color: var(--veryLightGray);
+    overflow: auto;
+}
+.btn-back {
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0 0 5px var(--darkGrayLight);
+    width: 80px;
+    height: 30px;
+    background-color: var(--white);
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+.countries-details .flag {
+    border-radius: 0;
+    height: 200px;
+}
+.countries-details .name {
+    margin-top: 30px;
+}
+.countries-details .capital {
+    margin-bottom: 40px;
+}
+.currencies span:last-child {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    background-color: var(--veryDarkModeBackgrd);
+    color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 0 5px var(--darkGrayLight);
+}
+.languages {
+    margin-bottom: 30px;
+}
+.borders-country h5 {
+    font-size: calc(1rem + 5px);
+    margin-bottom: 20px;
+}
+.borders {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.borders p {
+    width: 30%;
+    height: 30px;
+    box-shadow: 0 0 5px var(--darkGrayLight);
+    background-color: var(--white);
+    padding-top: 6px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+/*media*/
+@media (min-width: 1024px) and (max-width: 1440px)  {
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .d-flex-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 35px;
+    }
+    .d-flex-details {
+        display: flex;
+    }
+    .country-card {
+        width: 20%;
+        margin: 10px 30px;
+    }
+    .input input {
+        width: 450px;
+    }
+    .countries-details .flag {
+        width: 450px;
+        margin-left: 50px;
+        transform: scaleY(1.2);
+    }
+    .countries-details .name {
+        margin-bottom: 20px;
+    }
+    .information {
+        margin-left: 100px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right-side {
+        padding-top: 75px;
+        margin-left: 130px;
+    }
+    .btn-back {
+        margin-left: 50px;
+    }
+    .borders-country {
+        min-width: 200px;
+    }
+    .borders {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .borders p {
+        width: fit-content;
+        padding: 5px;    
+        }
+}
+
+
+/* themes */
+.styleBdy {
+    background-color: var(--veryDarkModeBackgrd) !important;
+}
+.styleItems {
+    background-color: var(--darkMode) !important;
+}
+.styleTxt, .styleTxt input::placeholder {
+    color: var(--white) !important;
+}
+.styleTxtDetail {
+    color: var(--veryLightGray) !important;
+}
+.removeShadow{
+    box-shadow: none !important;
+}
