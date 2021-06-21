@@ -15,7 +15,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/vuejs-LtkP4gfE_)
 - Live Site URL: [Live](https://rest-countries-api2021.netlify.app/)
 
 
@@ -30,5 +30,5 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ## Author
 
 - Author - [Mohamed Hesham]
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@mohamedhesham221](https://www.frontendmentor.io/profile/yourusername)
 - Linkedin - [Mohamed Hesham](https://www.linkedin.com/in/mohamed-hesham-b7611618a/)
